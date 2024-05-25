@@ -29,4 +29,4 @@ I am proficient in a variety of architectural tools and software, which allows m
 
 ## Personal Interests
 
-Outside of my professional work, I have a keen interest in Origami. This intricate art form has taught me the importance of patience, precision, and creativity—qualities that I bring to my architectural practice. Origami not only inspires my designs but also enhances my problem-solving abilities and attention to detail.
+Outside of my professional work, I have a keen interest in Origami and Kirigami. These intricate art forms have taught me the importance of patience, precision, and creativity—qualities that I bring to my architectural practice. Both Origami and Kirigami not only inspire my designs but also enhance my problem-solving abilities and attention to detail.
