@@ -2,36 +2,44 @@
 layout: home
 ---
 <style>
+
+    /* Full-width carousel */
     .carousel-container {
         position: relative;
-        width: 100%;
-        height: 140%;
+        width: 80vw; /* Take up the most viewport width */
+        height: auto;
         margin: 2rem 0;
         overflow: hidden;
+        left: 50%; 
+        right: 50%;
+        transform: translateX(-50%); /* Make sure it's centered */
     }
+    
     .carousel-track {
         display: flex;
         transition: transform 0.5s ease;
+        width: 100%; /* Make the carousel fill the width */
     }
+
     .carousel-slide {
         flex: 0 0 100%;
-        width: 100%;
-        height: 140%;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #f0f0f0;
     }
+
     .carousel-slide img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
+        width: 100vw; /* Make the images span the full width of the viewport */
+        height: auto; /* Keep the aspect ratio */
+        object-fit: cover; /* Cover the space properly */
     }
+
+    /* Carousel Buttons */
     .carousel-button {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        background: rgba(0,0,0,0.5);
+        background: rgba(0, 0, 0, 0.5);
         color: white;
         border: none;
         padding: 1rem;
@@ -39,8 +47,16 @@ layout: home
         font-size: 1.5rem;
         z-index: 10;
     }
-    .carousel-button.prev { left: 1rem; }
-    .carousel-button.next { right: 1rem; }
+
+    .carousel-button.prev {
+        left: 1rem;
+    }
+
+    .carousel-button.next {
+        right: 1rem;
+    }
+
+    /* Carousel Indicators */
     .carousel-indicators {
         position: absolute;
         bottom: 1rem;
@@ -49,22 +65,26 @@ layout: home
         display: flex;
         gap: 0.5rem;
     }
+
     .indicator {
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        background-color: rgba(255,255,255,0.5);
+        background-color: rgba(255, 255, 255, 0.5);
         cursor: pointer;
     }
+
     .indicator.active {
         background-color: white;
     }
+
+    /* Carousel Caption */
     .carousel-caption {
-        position: relative;
+        position: absolute;
         bottom: 3rem;
         left: 50%;
         transform: translateX(-50%);
-        background-color: rgba(0,0,0,0.7);
+        background-color: rgba(0, 0, 0, 0.7);
         color: white;
         padding: 0.5rem 1rem;
         border-radius: 4px;
@@ -72,6 +92,7 @@ layout: home
         text-align: center;
     }
 </style>
+
 
 # Shreya Mane
 
