@@ -81,8 +81,9 @@ When it comes to designing a home, every detail—from furniture choices to wall
 <img src="{{ '/assets/shreya_mane/1.png' | relative_url }}" alt="Shreya Mane">
 
 
-
+<br>
 ---
+<br>
 
 ## Design 1: The Modern
 
@@ -128,7 +129,9 @@ The design includes both functional and decorative elements such as modern furni
 - *Roman blinds match the living room aesthetic, creating continuity between the spaces.*
 - *Frosted glass partition extends from the foyer, keeping the design cohesive.*
 
+<br>
 ---
+<br>
 
 ## Design 2: The Classical
 
@@ -174,7 +177,9 @@ The classical design focuses on comfort, warmth, and cultural richness, with a c
 - *Roman blinds in the dining room mirror those in the living room, tying the spaces together.*
 - *Crockery unit and wall art for both practicality and beauty on the kitchen wall.*
 
+<br>
 ---
+<br>
 
 
 ## Conclusion
