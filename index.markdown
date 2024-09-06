@@ -86,21 +86,24 @@ Outside of my professional work, I have a keen interest in Origami and Kirigami.
 </style>
 
 <script>
-    document.addEventListener('scroll', function() {
-        const scrollPosition = window.scrollY;
-        const windowHeight = window.innerHeight;
-        const card = document.querySelector('#business-card-container .card');
+    let lastScrollTop = 0;
+    const card = document.querySelector('#business-card-container .card');
+    const rotationSpeed = 120; // Adjust this value to control rotation sensitivity
 
-        // Calculate the rotation angle based on scroll position
-        const maxScroll = document.body.scrollHeight - windowHeight;
-        const rotation = (scrollPosition / maxScroll) * 3600;
-
-        // Ensure the rotation does not exceed 180 degrees
-        if (rotation > 180) {
-            rotation = 180;
-        }
-
-        // Apply the rotation to the card
-        card.style.transform = `rotateY(${rotation}deg)`;
-    });
+    window.addEventListener('scroll', function() {
+        const st = window.pageYOffset || document.documentElement.scrollTop;
+        const direction = st > lastScrollTop ? 1 : -1; // 1 for scrolling down, -1 for up
+        
+        // Calculate rotation based on scroll direction and speed
+        let currentRotation = parseFloat(card.style.transform.replace('rotateY(', '').replace('deg)', '') || 0);
+        let newRotation = currentRotation + (direction * rotationSpeed);
+        
+        // Limit rotation to 0-180 degrees
+        newRotation = Math.max(0, Math.min(180, newRotation));
+        
+        // Apply the new rotation
+        card.style.transform = `rotateY(${newRotation}deg)`;
+        
+        lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+    }, false);
 </script>
