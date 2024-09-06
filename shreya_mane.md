@@ -90,33 +90,34 @@ When it comes to designing a home, every detail—from furniture choices to wall
 ### Introduction
 In this design, sleek, crisp lines and a cool pastel color palette define a contemporary aesthetic, offering a chic and refreshing living experience. The emphasis is on minimalism, with functionality and understated elegance taking center stage. The use of frosted glass, clean vertical elements, and modern furnishings brings a cohesive and polished look to the space.
 
+<img src="{{ '/assets/shreya_mane/2.png' | relative_url }}" alt="Shreya Mane Modern">
+
 The design includes both functional and decorative elements such as modern furniture, floor lamps, wall art, and plants. The color palette is primarily teak brown, grey, green, and beige, maintaining a cool and balanced ambiance throughout the house.
 
+### Foyer:
+
 <div id="carousel1" class="carousel-container" data-slides='[
-    {"image": "{{ site.baseurl }}/assets/shreya_mane/2.png"},
     {"image": "{{ site.baseurl }}/assets/shreya_mane/3.png"},
     {"image": "{{ site.baseurl }}/assets/shreya_mane/4.png"},
     {"image": "{{ site.baseurl }}/assets/shreya_mane/5.png"},
-    {"image": "{{ site.baseurl }}/assets/shreya_mane/6.png"},
+    {"image": "{{ site.baseurl }}/assets/shreya_mane/6.png"}
+]'></div>
+
+- *Half-height frosted glass with a ledge (Option 1)*  
+- *Full-height frosted glass with a ledge (Option 2)*  
+
+### Living Room:
+
+<div id="carousel1" class="carousel-container" data-slides='[
     {"image": "{{ site.baseurl }}/assets/shreya_mane/7.png"},
     {"image": "{{ site.baseurl }}/assets/shreya_mane/8.png"},
     {"image": "{{ site.baseurl }}/assets/shreya_mane/9.png"},
     {"image": "{{ site.baseurl }}/assets/shreya_mane/10.png"},
     {"image": "{{ site.baseurl }}/assets/shreya_mane/11.png"},
     {"image": "{{ site.baseurl }}/assets/shreya_mane/12.png"},
-    {"image": "{{ site.baseurl }}/assets/shreya_mane/13.png"},
-    {"image": "{{ site.baseurl }}/assets/shreya_mane/14.png"},
-    {"image": "{{ site.baseurl }}/assets/shreya_mane/15.png"},
-    {"image": "{{ site.baseurl }}/assets/shreya_mane/16.png"},
-    {"image": "{{ site.baseurl }}/assets/shreya_mane/17.png"},
-    {"image": "{{ site.baseurl }}/assets/shreya_mane/18.png"}
+    {"image": "{{ site.baseurl }}/assets/shreya_mane/13.png"}
 ]'></div>
 
-### Foyer:
-- *Half-height frosted glass with a ledge (Option 1)*  
-- *Full-height frosted glass with a ledge (Option 2)*  
-
-### Living Room:
 - *End-to-end full-height curtains for an elegant and expansive look.*
 - *Colorful square carpet with a center table adds a touch of vibrance.*
 - *A large painting serves as a focal point on the end wall.*
@@ -124,6 +125,15 @@ The design includes both functional and decorative elements such as modern furni
 - *Window with Roman blinds brings in natural light while maintaining privacy.*
 
 ### Dining Area:
+
+<div id="carousel1" class="carousel-container" data-slides='[
+    {"image": "{{ site.baseurl }}/assets/shreya_mane/14.png"},
+    {"image": "{{ site.baseurl }}/assets/shreya_mane/15.png"},
+    {"image": "{{ site.baseurl }}/assets/shreya_mane/16.png"},
+    {"image": "{{ site.baseurl }}/assets/shreya_mane/17.png"},
+    {"image": "{{ site.baseurl }}/assets/shreya_mane/18.png"}
+]'></div>
+
 - *Round six-seater marble top table adds sophistication.*
 - *Crockery unit and wall art provide options for functional yet decorative storage.*
 - *Roman blinds match the living room aesthetic, creating continuity between the spaces.*
@@ -138,33 +148,34 @@ The design includes both functional and decorative elements such as modern furni
 ### Introduction
 This design exudes warmth and a traditional Indian aesthetic. Featuring a mix of warm pastel colors, traditional wooden furniture, and rich textures, the space is imbued with a sense of coziness and timeless elegance. Elements like brass light fixtures, traditional carpets, and ornate wall art create a homely yet grand vibe.
 
+<img src="{{ '/assets/shreya_mane/19.png' | relative_url }}" alt="Shreya Mane Modern">
+
 The classical design focuses on comfort, warmth, and cultural richness, with a color palette including teak brown, beige, red, and mauve. The decor leans heavily on traditional craftsmanship and intricate details.
 
+### Foyer:
+
 <div id="carousel2" class="carousel-container" data-slides='[
-    {"image": "{{ site.baseurl }}/assets/shreya_mane/19.png"},
     {"image": "{{ site.baseurl }}/assets/shreya_mane/20.png"},
     {"image": "{{ site.baseurl }}/assets/shreya_mane/21.png"},
     {"image": "{{ site.baseurl }}/assets/shreya_mane/22.png"},
-    {"image": "{{ site.baseurl }}/assets/shreya_mane/23.png"},
+    {"image": "{{ site.baseurl }}/assets/shreya_mane/23.png"}
+]'></div>
+
+- *Brick wall with a traditional mirror and console (Option 1)*  
+- *Traditional columns with Ganesha wall art (Option 2)*  
+
+### Living Room:
+
+<div id="carousel2" class="carousel-container" data-slides='[
     {"image": "{{ site.baseurl }}/assets/shreya_mane/24.png"},
     {"image": "{{ site.baseurl }}/assets/shreya_mane/25.png"},
     {"image": "{{ site.baseurl }}/assets/shreya_mane/26.png"},
     {"image": "{{ site.baseurl }}/assets/shreya_mane/27.png"},
     {"image": "{{ site.baseurl }}/assets/shreya_mane/28.png"},
     {"image": "{{ site.baseurl }}/assets/shreya_mane/29.png"},
-    {"image": "{{ site.baseurl }}/assets/shreya_mane/30.png"},
-    {"image": "{{ site.baseurl }}/assets/shreya_mane/31.png"},
-    {"image": "{{ site.baseurl }}/assets/shreya_mane/32.png"},
-    {"image": "{{ site.baseurl }}/assets/shreya_mane/33.png"},
-    {"image": "{{ site.baseurl }}/assets/shreya_mane/34.png"},
-    {"image": "{{ site.baseurl }}/assets/shreya_mane/35.png"}
+    {"image": "{{ site.baseurl }}/assets/shreya_mane/30.png"}
 ]'></div>
 
-### Foyer:
-- *Brick wall with a traditional mirror and console (Option 1)*  
-- *Traditional columns with Ganesha wall art (Option 2)*  
-
-### Living Room:
 - *Full-height curtains soften the ambiance and offer privacy.*
 - *Traditional square carpet and center table ground the space in a cultural aesthetic.*
 - *Display shelves and plants on the end wall create a calm and balanced composition.*
@@ -172,6 +183,15 @@ The classical design focuses on comfort, warmth, and cultural richness, with a c
 - *Window with Roman blinds and an existing diwan for a relaxing nook.*
 
 ### Dining Area:
+
+<div id="carousel2" class="carousel-container" data-slides='[
+    {"image": "{{ site.baseurl }}/assets/shreya_mane/31.png"},
+    {"image": "{{ site.baseurl }}/assets/shreya_mane/32.png"},
+    {"image": "{{ site.baseurl }}/assets/shreya_mane/33.png"},
+    {"image": "{{ site.baseurl }}/assets/shreya_mane/34.png"},
+    {"image": "{{ site.baseurl }}/assets/shreya_mane/35.png"}
+]'></div>
+
 - *Square six-seater marble top table with a built-in bench for four and two chairs for added seating options.*
 - *Partition with traditional Indian columns connecting the foyer and dining, reinforcing the classical style.*
 - *Roman blinds in the dining room mirror those in the living room, tying the spaces together.*
