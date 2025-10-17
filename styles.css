@@ -14,6 +14,14 @@
     /* Typography */
     --font-display: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-body: 'Epilogue', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-size-base: 20px;
+    --font-size-h1: clamp(2.5rem, 7vw, 4rem);
+    --font-size-h2: clamp(2rem, 5vw, 3rem);
+    --font-size-h3: clamp(1.5rem, 4vw, 2.25rem);
+    --font-size-p: 1.25rem;
+    --hero-image-mobile-width: 80vw;
+    --hero-image-mobile-max-width: 320px;
+    --hero-image-mobile-height: auto;
     
     /* Spacing */
     --space-xs: 0.5rem;
@@ -76,7 +84,7 @@ html {
 
 body {
     font-family: var(--font-body);
-    font-size: 17px;
+    font-size: var(--font-size-base);
     line-height: 1.6;
     color: var(--color-primary);
     background-color: var(--color-bg);
@@ -131,22 +139,23 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-size: var(--font-size-h1);
     margin-bottom: var(--space-md);
 }
 
 h2 {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: var(--font-size-h2);
     margin-bottom: var(--space-md);
 }
 
 h3 {
-    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-size: var(--font-size-h3);
     margin-bottom: var(--space-sm);
 }
 
 p {
     margin-bottom: var(--space-sm);
+    font-size: var(--font-size-p);
 }
 
 .accent {
@@ -290,26 +299,61 @@ section {
    ============================================ */
 .hero {
     min-height: 70vh;
-    display: flex;
+    display: grid;
     align-items: center;
 }
 
 .hero-content {
     display: grid;
-    grid-template-columns: 1fr 0.9fr;
+    grid-template-columns: 1fr 1fr;
     gap: var(--space-lg);
     align-items: center;
 }
 
 .hero-subtitle {
     font-weight: 500;
-    margin-top: var(--space-sm);
+    margin-top: var(--space-md);
 }
 
 .hero-image-mobile {
-    display: none;
-    margin-top: var(--space-md);
-    border-radius: var(--border-radius);
+        display: block;
+        margin-top: var(--space-md);
+        width: var(--hero-image-mobile-width);
+        max-width: var(--hero-image-mobile-max-width);
+        height: var(--hero-image-mobile-height);
+        border-radius: var(--border-radius);
+        object-fit: cover;
+}
+
+.hero-image-desktop {
+        display: none;
+}
+
+@media (min-width: 768px) {
+    .hero-image-mobile {
+        display: none;
+    }
+    .hero-image-desktop {
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: var(--border-radius);
+        object-fit: cover;
+    }
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .hero-image-mobile {
+        width: 90vw;
+        max-width: 250px;
+    }
+}
 }
 
 
@@ -323,7 +367,7 @@ section {
 .about-content {
     display: grid;
     grid-template-columns: 1.4fr 0.6fr;
-    gap: var(--space-lg);
+    gap: var(--space-md);
     align-items: center;
 }
 
@@ -333,7 +377,14 @@ section {
 }
 
 .about-title h2 {
-    text-align: center;
+        text-align: center;
+}
+
+@media (max-width: 600px) {
+    .about-title h2 {
+        text-align: center;
+    }
+}
 }
 
 /* ============================================
@@ -358,7 +409,16 @@ section {
     border-left: 4px solid var(--color-secondary);
     padding-left: var(--space-md);
     margin-bottom: var(--space-md);
-    text-align: left;
+        text-align: left;
+}
+
+@media (max-width: 600px) {
+    .about-title {
+        text-align: center;
+    }
+    .about-title h2 {
+        text-align: center;
+    }
 }
 
 .quote-attribution {
@@ -610,7 +670,7 @@ section {
     display: grid;
     grid-template-columns: 0.6fr 1.4fr;
     gap: var(--space-lg);
-    align-items: center;
+    align-items: top;
 }
 
 .personal-title h2 {
@@ -619,7 +679,7 @@ section {
 
 .personal-text p {
     font-size: 1.1rem;
-    line-height: 2;
+    line-height: 1.5;
 }
 
 /* ============================================
