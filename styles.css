@@ -387,11 +387,11 @@ section {
     gap: var(--space-lg);
     margin-bottom: var(--space-xl);
     align-items: center;
-        background-color: var(--color-white);
-        border-radius: var(--border-radius);
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        transition: transform var(--transition), box-shadow var(--transition);
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform var(--transition), box-shadow var(--transition);
 }
 
 /* Add hover effect similar to .work-card */
@@ -429,6 +429,10 @@ section {
     font-weight: 600;
     margin-bottom: var(--space-sm);
     border: 2px solid var(--color-secondary); /* pill-shaped stroke */
+}
+
+.case-study-content {
+    padding: var(--space-md);
 }
 
 .case-study-content h3 {
