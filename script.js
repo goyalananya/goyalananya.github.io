@@ -1,50 +1,83 @@
-// Enhanced website functionality with better UX and error handling
+'use strict';
+
+// Utility Functions
+const debounce = (func, wait) => {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+};
+
+const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Initialize website functionality with better UX and error handling
 document.addEventListener('DOMContentLoaded', () => {
-    // ============================================
-    // Mobile Navigation Toggle
-    // ============================================
+    try {
+        initializeNavigation();
+        initializeSmoothScroll();
+        if (!isReducedMotion) {
+            initializeFadeInAnimations();
+        }
+    } catch (error) {
+        console.error('Error initializing website functionality:', error);
+    }
+});
+
+// ============================================
+// Mobile Navigation
+// ============================================
+function initializeNavigation() {
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
     const navItems = document.querySelectorAll('.nav-links a');
-    
-    if (navToggle && navLinks) {
-        navToggle.addEventListener('click', () => {
-            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-            navToggle.setAttribute('aria-expanded', !isExpanded);
-            navLinks.classList.toggle('active');
-            
-            // Prevent body scroll when menu is open
-            document.body.style.overflow = !isExpanded ? 'hidden' : '';
-        });
-        
-        // Close menu when clicking nav items
-        navItems.forEach(item => {
-            item.addEventListener('click', () => {
-                navToggle.setAttribute('aria-expanded', 'false');
-                navLinks.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
-                navToggle.setAttribute('aria-expanded', 'false');
-                navLinks.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
-        
-        // Close menu on ESC key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
-                navToggle.setAttribute('aria-expanded', 'false');
-                navLinks.classList.remove('active');
-                document.body.style.overflow = '';
-                navToggle.focus();
-            }
-        });
+
+    if (!navToggle || !navLinks) {
+        console.warn('Navigation elements not found');
+        return;
     }
+
+    const toggleMenu = (isOpen) => {
+        navToggle.setAttribute('aria-expanded', isOpen);
+        navLinks.classList.toggle('active', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+        
+        if (!isOpen && navToggle.focus) {
+            navToggle.focus();
+        }
+    };
+
+    // Toggle menu
+    navToggle.addEventListener('click', () => {
+        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+        toggleMenu(!isExpanded);
+    });
+
+    // Close menu when clicking nav items
+    navItems.forEach(item => {
+        item.addEventListener('click', () => toggleMenu(false));
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (navLinks.classList.contains('active') && 
+            !navToggle.contains(e.target) && 
+            !navLinks.contains(e.target)) {
+            toggleMenu(false);
+        }
+    });
+
+    // Close menu on ESC key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+            toggleMenu(false);
+        }
+    });
+}
     
     // ============================================
     // Smooth Scroll for Anchor Links
@@ -74,9 +107,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // ============================================
-    // Intersection Observer for Fade-in Animations
-    // ============================================
+// ============================================
+// Smooth Scroll
+// ============================================
+function initializeSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Don't prevent default for just "#" or disabled links
+            if (href === '#' || this.classList.contains('coming-soon')) {
+                e.preventDefault();
+                return;
+            }
+            
+            e.preventDefault();
+            const target = document.querySelector(href);
+            
+            if (target) {
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                if (!isReducedMotion) {
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    window.scrollTo(0, offsetPosition);
+                }
+            }
+        });
+    });
+}
+
+// ============================================
+// Fade-in Animations
+// ============================================
+function initializeFadeInAnimations() {
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -87,7 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
-                // Unobserve after animation to improve performance
                 fadeInObserver.unobserve(entry.target);
             }
         });
@@ -98,6 +166,10 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(section => {
         section.style.opacity = '0';
         section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        fadeInObserver.observe(section);
+    });
+}
         section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         fadeInObserver.observe(section);
     });

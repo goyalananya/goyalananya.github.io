@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ananya Goyal</title>
-    <!-- <meta name="description" content="Visual designer that will create a strong, memorable brand with a custom design that brings your vision to life and engages your audience."> -->
-    <!-- <link rel="icon" href="./assets/logo_r1qaJQiri6sK3rPyq-Sar.svg"> -->
+    <meta name="description" content="Ananya Goyal - UX Designer portfolio showcasing expertise in user experience design, architecture, and digital solutions.">
+    <meta name="theme-color" content="#FAFAFA">
+    <title>Ananya Goyal | UX Designer</title>
     
     <!-- Preload critical assets -->
     <link rel="preload" href="./assets/Epilogue-VariableFont_wght_UMmD5uKuAMfCr3au74g5m.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="./assets/Syne-VariableFont_wght_6dXny1sFQwxtR_stKF_A3.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="./assets/Header Pic.png" as="image">
     
     <link rel="stylesheet" href="./styles.css">
 </head>
@@ -100,37 +101,45 @@
         <div class="container">
             <h2>Case Studies</h2>
             
-            <div class="case-study">
+            <div class="case-study" role="article">
                 <div class="case-study-image">
                     <img src="./assets/KCP.png" 
-                         alt="Museum Experience - Karnataka Chitrakala Parishath"
+                         alt="Museum Experience - Karnataka Chitrakala Parishath mobile app interface mockup"
                          loading="lazy">
                 </div>
                 <div class="case-study-content">
-            
-                    <h3>Karnataka Chitrakala Parishath</h3>
+                    <h3 id="kcp-title">Karnataka Chitrakala Parishath</h3>
                     <p>
                         A digital companion that enhances art discovery and visitor engagement at KCP Museum.
                         The app reimagines the experience by blending navigation, storytelling, and accessibility 
                         into one cohesive platform.
                     </p>
-                    <a href="https://goyalananya.com/KCP/" class="btn-primary" aria-disabled="false">View Case Study →</a>
+                    <a href="https://goyalananya.com/KCP/" 
+                       class="btn-primary" 
+                       aria-labelledby="kcp-title"
+                       aria-label="View Karnataka Chitrakala Parishath case study">
+                        View Case Study <span aria-hidden="true">→</span>
+                    </a>
                 </div>
             </div>
 
-            <div class="case-study reverse">
+            <div class="case-study reverse" role="article">
                 <div class="case-study-content">
-                
-                    <h3>WannaDOO!!</h3>
+                    <h3 id="wannadoo-title">WannaDOO!!</h3>
                     <p>
                         A behavior-design app that transforms idle moments into intentional, rewarding micro-activities.
                         WannaDOO helps users turn everyday downtime into opportunities for small wins, joy, and self-connection.
                     </p>
-                    <a href="https://goyalananya.com/WD/" class="btn-primary" aria-disabled="false">View Case Study →</a>
+                    <a href="https://goyalananya.com/WD/" 
+                       class="btn-primary" 
+                       aria-labelledby="wannadoo-title"
+                       aria-label="View WannaDOO case study">
+                        View Case Study <span aria-hidden="true">→</span>
+                    </a>
                 </div>
                 <div class="case-study-image">
                     <img src="./assets/WD.png" 
-                         alt="WannaDOO Behavioral Product Design"
+                         alt="WannaDOO app interface showing activity suggestions and mood tracking features"
                          loading="lazy">
                 </div>
             </div>
@@ -179,37 +188,49 @@
     </section>
 
     <!-- Past Work Section -->
-    <section class="past-work">
+    <section class="past-work" aria-labelledby="other-work-title">
         <div class="container">
             <div class="section-header">
-                <h2>Other Work</h2>
+                <h2 id="other-work-title">Other Work</h2>
                 <p>Exploring ideas across disciplines — where architecture, design, and curiosity meet.</p>
             </div>
             
-            <div class="work-grid">
-                <div class="work-card">
+            <div class="work-grid" role="list">
+                <div class="work-card" role="listitem">
                     <div class="work-image">
                         <img src="./assets/ux-store-ukeUH3KbMWU-unsplash_(1)_O4QinEBfJM4QtbZqgomLl.jpg" 
-                             alt="Portfolio work example"
+                             alt="Abstract architectural design showing innovative spatial concepts"
                              loading="lazy">
                     </div>
                     <div class="work-content">
-                        <h3>Built & Spatial Work</h3>
+                        <h3 id="spatial-work-title">Built & Spatial Work</h3>
                         <p>Architectural explorations that connect form, function, and feeling.</p>
-                        <a href="#" class="btn-secondary coming-soon" aria-disabled="true">Know more →</a>
+                        <a href="#" 
+                           class="btn-secondary coming-soon" 
+                           aria-labelledby="spatial-work-title"
+                           aria-disabled="true">
+                            Know more <span aria-hidden="true">→</span>
+                            <span class="visually-hidden">about Built & Spatial Work - Coming Soon</span>
+                        </a>
                     </div>
                 </div>
 
-                <div class="work-card">
+                <div class="work-card" role="listitem">
                     <div class="work-image">
                         <img src="./assets/ux-store-ukeUH3KbMWU-unsplash_(1)_O4QinEBfJM4QtbZqgomLl.jpg" 
-                             alt="Portfolio work example"
+                             alt="Creative experimental design projects and prototypes"
                              loading="lazy">
                     </div>
                     <div class="work-content">
-                        <h3>Experiments & Play</h3>
+                        <h3 id="experiments-title">Experiments & Play</h3>
                         <p>Personal projects shaped by curiosity and everyday observations.</p>
-                        <a href="#" class="btn-secondary coming-soon" aria-disabled="true">Know more →</a>
+                        <a href="#" 
+                           class="btn-secondary coming-soon" 
+                           aria-labelledby="experiments-title"
+                           aria-disabled="true">
+                            Know more <span aria-hidden="true">→</span>
+                            <span class="visually-hidden">about Experiments & Play - Coming Soon</span>
+                        </a>
                     </div>
                 </div>
             </div>
