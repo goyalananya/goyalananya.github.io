@@ -14,11 +14,12 @@
     /* Typography */
     --font-display: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-body: 'Epilogue', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-size-base: 20px;
-    --font-size-h1: clamp(2.5rem, 7vw, 4rem);
-    --font-size-h2: clamp(2rem, 5vw, 3rem);
-    --font-size-h3: clamp(1.5rem, 4vw, 2.25rem);
-    --font-size-p: 1.25rem;
+    --font-size-base: clamp(16px, 1.25vw, 20px);
+    --font-size-h1: clamp(2.5rem, 5vw + 1rem, 4rem);
+    --font-size-h2: clamp(2rem, 3vw + 1rem, 3rem);
+    --font-size-h3: clamp(1.5rem, 2vw + 1rem, 2.25rem);
+    --font-size-p: clamp(1rem, 1vw + 0.5rem, 1.25rem);
+    --font-size-small: clamp(0.875rem, 0.875vw + 0.5rem, 1rem);
     --hero-image-mobile-width: 80vw;
     --hero-image-mobile-max-width: 320px;
     --hero-image-mobile-height: auto;
@@ -336,24 +337,16 @@ section {
     .hero-image-desktop {
         display: block;
         width: 100%;
-        max-width: 400px;
         height: auto;
         border-radius: var(--border-radius);
         object-fit: cover;
     }
 }
 @media (max-width: 600px) {
-    h1 {
-        font-size: 2.2rem;
-    }
-    h2 {
-        font-size: 1.5rem;
-    }
     .hero-image-mobile {
         width: 90vw;
         max-width: 250px;
     }
-}
 }
 
 
@@ -372,7 +365,7 @@ section {
 }
 
 .about-text p {
-    font-size: 1.1rem;
+    font-size: var(--font-size-p);
     line-height: 2;
 }
 
@@ -385,7 +378,6 @@ section {
         text-align: center;
     }
 }
-}
 
 /* ============================================
    Quote Section
@@ -396,13 +388,13 @@ section {
 }
 
 .quote-content {
-    max-width: 800px;
+    /* max-width: 800px; */
     margin: 0 auto;
     text-align: center;
 }
 
 .quote {
-    font-size: 1.25rem;
+    font-size: var(--font-size-p);
     font-style: italic;
     font-weight: 500;
     line-height: 1.8;
@@ -505,7 +497,7 @@ section {
     transition: all var(--transition);
     cursor: pointer;
     border: none;
-    font-size: 1rem;
+    font-size: var(--font-size-small);
     font-family: var(--font-body);
 }
 
@@ -551,7 +543,7 @@ section {
 
 .coming-soon::after {
     content: ' (Coming Soon)';
-    font-size: 0.75rem;
+    font-size: calc(var(--font-size-small) * 0.875);
     margin-left: 0.25rem;
     opacity: 0;
     transition: opacity var(--transition);
@@ -647,10 +639,6 @@ section {
     color: var(--color-primary);
 }
 
-.work-image {
-    /* flex: 0 0 40%; */
-    /* max-width: 300px; */
-}
 
 .work-image img {
     aspect-ratio: 1/1;
@@ -707,11 +695,11 @@ section {
 }
 
 .personal-title h2 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: var(--font-size-h2);
 }
 
 .personal-text p {
-    font-size: 1.1rem;
+    font-size: var(--font-size-p);
     line-height: 1.5;
 }
 
@@ -758,7 +746,7 @@ section {
     border: 2px solid var(--color-bg-alt);
     border-radius: var(--border-radius);
     font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: var(--font-size-p);
     transition: border-color var(--transition);
 }
 
