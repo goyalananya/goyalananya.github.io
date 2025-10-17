@@ -24,7 +24,7 @@
     
     /* Layout */
     --container-max: 1200px;
-    --border-radius: 0.5rem;
+    --border-radius: 1.00rem;
     
     /* Transitions */
     --transition: 0.3s ease;
@@ -384,7 +384,7 @@ section {
 .case-study {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-lg);
+    gap: var(--space-sm);
     margin-bottom: var(--space-xl);
     align-items: center;
     background-color: var(--color-white);
@@ -417,18 +417,6 @@ section {
     aspect-ratio: 4/3;
     object-fit: cover;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.case-study-tag {
-    display: inline-block;
-    background-color: var(--color-bg);
-    color: var(--color-secondary);
-    padding: var(--space-xs) var(--space-md);
-    border-radius: 2rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    margin-bottom: var(--space-sm);
-    border: 2px solid var(--color-secondary); /* pill-shaped stroke */
 }
 
 .case-study-content {
@@ -546,13 +534,13 @@ section {
 }
 
 .skill-icon img {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
 }
 
 .skill-content h3 {
     font-family: var(--font-display);
-    text-align: center;
+    text-align: left;
     margin-bottom: var(--space-sm);
 }
 
