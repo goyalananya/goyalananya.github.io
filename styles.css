@@ -387,6 +387,17 @@ section {
     gap: var(--space-lg);
     margin-bottom: var(--space-xl);
     align-items: center;
+        background-color: var(--color-white);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        transition: transform var(--transition), box-shadow var(--transition);
+}
+
+/* Add hover effect similar to .work-card */
+.case-study:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
 .case-study.reverse {
@@ -402,7 +413,7 @@ section {
 }
 
 .case-study-image img {
-    border-radius: var(--border-radius);
+    /* border-radius: var(--border-radius); */
     aspect-ratio: 4/3;
     object-fit: cover;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -417,6 +428,7 @@ section {
     font-size: 0.875rem;
     font-weight: 600;
     margin-bottom: var(--space-sm);
+    border: 2px solid var(--color-secondary); /* pill-shaped stroke */
 }
 
 .case-study-content h3 {
