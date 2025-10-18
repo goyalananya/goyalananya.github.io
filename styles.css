@@ -774,6 +774,7 @@ section {
 .footer-logo {
     display: inline-block;
     margin-bottom: var(--space-md);
+    width: 200px;
 }
 
 .footer p {
@@ -893,9 +894,6 @@ section {
     color: var(--color-accent);
 }
 
-/* ============================================
-   Responsive Design
-   ============================================ */
 /* ============================================
    Media Queries - Responsive Design
    ============================================ */
