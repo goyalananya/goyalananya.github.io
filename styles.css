@@ -740,7 +740,7 @@ section {
     width: 200px;
 }
 
-.footer p {
+.footer h4 {
     margin-bottom: var(--space-md);
 }
 
