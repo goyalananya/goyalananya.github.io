@@ -22,13 +22,14 @@
     --font-display: 'Syne', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     --font-body: 'Epilogue', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     
-    /* Fluid Typography */
-    --font-size-base: clamp(16px, 1.25vw, 20px);
-    --font-size-h1: clamp(2.5rem, 5vw + 1rem, 4rem);
-    --font-size-h2: clamp(2rem, 3vw + 1rem, 3rem);
-    --font-size-h3: clamp(1.5rem, 2vw + 1rem, 2.25rem);
-    --font-size-p: clamp(1rem, 1vw + 0.5rem, 1.25rem);
-    --font-size-small: clamp(0.875rem, 0.875vw + 0.5rem, 1rem);
+    /* Fluid Typography - Clean Sizes & Proportions */
+    --font-size-base: clamp(1rem, 1.2vw, 1.25rem);         /* 16px - 18px */
+    --font-size-h1: clamp(2.5rem, 5vw, 3.5rem);             /* 40px - 56px */
+    --font-size-h2: clamp(2rem, 3vw, 2.75rem);              /* 32px - 44px */
+    --font-size-h3: clamp(1.5rem, 2vw, 2rem);               /* 24px - 32px */
+    --font-size-h4: clamp(1.25rem, 1.5vw, 1.5rem);         /* 18px - 24px */
+    --font-size-p: clamp(1rem, 1vw, 1.25rem);              /* 16px - 18px */
+    --font-size-small: clamp(0.75rem, 0.75vw, 1rem);        /* 14px - 16px */
     
     /* Spacing System - 8pt Grid */
     --space-xs: clamp(0.5rem, 0.5vw, 0.75rem);    /* 8px - 12px */
@@ -80,7 +81,7 @@
 /* ============================================
    Base Styles & Accessibility
    ============================================ */
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -144,7 +145,7 @@ html {
 body {
     font-family: var(--font-body);
     font-size: var(--font-size-base);
-    line-height: 1.6;
+    line-height: 2;
     color: var(--color-primary);
     background-color: var(--color-bg);
     -webkit-font-smoothing: antialiased;
@@ -191,10 +192,10 @@ a:focus {
 /* ============================================
    Typography
    ============================================ */
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: var(--font-display);
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
 h1 {
@@ -212,7 +213,13 @@ h3 {
     margin-bottom: var(--space-sm);
 }
 
+h4 {
+    font-size: var(--font-size-h4);
+    margin-bottom: var(--space-xs);
+}
+
 p {
+    font-family: var(--font-body);
     margin-bottom: var(--space-sm);
     font-size: var(--font-size-p);
 }
@@ -231,7 +238,7 @@ p {
 }
 
 strong {
-    font-weight: 600;
+    font-weight: 800;
 }
 
 em {
@@ -371,7 +378,7 @@ section {
 
 .hero-subtitle {
     font-weight: 500;
-    margin-top: var(--space-md);
+    margin-top: var(--space-lr);
 }
 
 .hero-image-mobile {
@@ -380,7 +387,7 @@ section {
         width: var(--hero-image-mobile-width);
         max-width: var(--hero-image-mobile-max-width);
         height: var(--hero-image-mobile-height);
-        border-radius: var(--border-radius);
+        /* border-radius: var(--border-radius); */
         object-fit: cover;
 }
 
@@ -396,14 +403,14 @@ section {
         display: block;
         width: 100%;
         height: auto;
-        border-radius: var(--border-radius);
+        /* border-radius: var(--border-radius); */
         object-fit: cover;
     }
 }
 @media (max-width: 600px) {
     .hero-image-mobile {
         width: 90vw;
-        max-width: 250px;
+        /* max-width: 250px; */
     }
 }
 
@@ -417,8 +424,8 @@ section {
 
 .about-content {
     display: grid;
-    grid-template-columns: 1.4fr 0.6fr;
-    gap: var(--space-md);
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: var(--space-xl);
     align-items: center;
 }
 
@@ -452,14 +459,14 @@ section {
 }
 
 .quote {
-    font-size: var(--font-size-p);
+    font-size: var(--font-size-h4);
     font-style: italic;
     font-weight: 500;
     line-height: 1.8;
-    border-left: 4px solid var(--color-secondary);
+    border-left: 6px solid var(--color-secondary);
     padding-left: var(--space-md);
     margin-bottom: var(--space-md);
-        text-align: left;
+    text-align: left;
 }
 
 @media (max-width: 600px) {
@@ -469,17 +476,6 @@ section {
     .about-title h2 {
         text-align: center;
     }
-}
-
-.quote-attribution {
-    font-weight: 600;
-    border-top: 2px solid var(--color-secondary);
-    border-right: 2px solid var(--color-secondary);
-    border-bottom: 2px solid var(--color-secondary);
-    border-left: 0;
-    display: inline-block;
-    padding: var(--space-sm) var(--space-md);
-    align-self: flex-end;
 }
 
 /* ============================================
@@ -538,7 +534,6 @@ section {
 }
 
 .case-study-content p {
-    font-family: var(--font-body);
     margin-bottom: var(--space-md);
     line-height: 1.8;
 }
@@ -555,7 +550,7 @@ section {
     transition: all var(--transition);
     cursor: pointer;
     border: none;
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-p);
     font-family: var(--font-body);
 }
 
@@ -592,30 +587,6 @@ section {
     color: var(--color-white);
 }
 
-/* Coming soon state for placeholder links */
-.coming-soon {
-    position: relative;
-    cursor: not-allowed;
-    opacity: 0.7;
-}
-
-.coming-soon::after {
-    content: ' (Coming Soon)';
-    font-size: calc(var(--font-size-small) * 0.875);
-    margin-left: 0.25rem;
-    opacity: 0;
-    transition: opacity var(--transition);
-}
-
-.coming-soon:hover::after {
-    opacity: 1;
-}
-
-.coming-soon:hover {
-    transform: none;
-    box-shadow: none;
-}
-
 /* ============================================
    Skills Section
    ============================================ */
@@ -649,13 +620,11 @@ section {
 }
 
 .skill-content h3 {
-    font-family: var(--font-display);
     text-align: left;
     margin-bottom: var(--space-sm);
 }
 
 .skill-content p {
-    font-family: var(--font-body);
     text-align: justify;
     line-height: 1.8;
     margin: 0;
@@ -681,6 +650,7 @@ section {
 
 .work-card {
     display: flex;
+    flex-direction: row;
     align-items: center;
     background-color: var(--color-white);
     border-radius: var(--border-radius);
@@ -701,21 +671,14 @@ section {
 .work-image img {
     aspect-ratio: 1/1;
     object-fit: cover;
-    width: 120px;
-    height: 120px;
+    width: 135px;
+    height: 135px;
+    padding: var(--space-sm);
 }
 
 .work-content {
     flex: 1;
-    padding: var(--space-md);
-}
-
-.work-content h3 {
-    margin-bottom: var(--space-sm);
-}
-
-.work-content p {
-    margin-bottom: 0;
+    padding: var(--space-sm);
 }
 
 @media (max-width: 768px) {
@@ -747,7 +710,7 @@ section {
 
 .personal-content {
     display: grid;
-    grid-template-columns: 0.6fr 1.4fr;
+    grid-template-columns: 0.4fr 1.6fr;
     gap: var(--space-lg);
     align-items: top;
 }
@@ -779,70 +742,6 @@ section {
 
 .footer p {
     margin-bottom: var(--space-md);
-}
-
-/* Contact Form */
-.contact-form {
-    max-width: 500px;
-    margin: var(--space-lg) auto;
-    text-align: left;
-}
-
-.form-group {
-    margin-bottom: var(--space-md);
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: var(--space-xs);
-    font-weight: 600;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: var(--space-sm);
-    border: 2px solid var(--color-bg-alt);
-    border-radius: var(--border-radius);
-    font-family: var(--font-body);
-    font-size: var(--font-size-p);
-    transition: border-color var(--transition);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--color-accent);
-    outline: none;
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-.contact-form .btn-primary {
-    width: 100%;
-    margin-top: var(--space-sm);
-}
-
-.form-status {
-    margin-top: var(--space-md);
-    padding: var(--space-sm);
-    border-radius: var(--border-radius);
-    text-align: center;
-    display: none;
-}
-
-.form-status.success {
-    display: block;
-    background-color: var(--color-secondary);
-    color: var(--color-white);
-}
-
-.form-status.error {
-    display: block;
-    background-color: var(--color-accent);
-    color: var(--color-white);
 }
 
 .divider {
