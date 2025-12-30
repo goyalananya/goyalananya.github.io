@@ -3,289 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ananya Goyal - Design Portfolio">
-    <meta name="theme-color" content="#FAFAFA">
+    <meta name="description" content="Ananya Goyal - UX Designer with 5 years of architectural experience. Building experiences that hold people.">
+    <meta name="theme-color" content="#FAF9F7">
     <title>Ananya Goyal | UX Designer</title>
-    
-    <!-- Preload critical assets -->
-    <link rel="preload" href="./assets/Epilogue-VariableFont_wght_UMmD5uKuAMfCr3au74g5m.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="./assets/Syne-VariableFont_wght_6dXny1sFQwxtR_stKF_A3.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="./assets/Header Pic.png" as="image">
-    
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <!-- Skip to content link for accessibility -->
-    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
 
-    <!-- Navigation -->
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <div class="container">
-            <a href="/" class="logo" aria-label="Home">
-                <img src="./assets/L1.png" alt="AG - Logo" width="100" height="45">
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="nav__logo" aria-label="Ananya Goyal - Home">
+                <img src="./assets/L1.png" alt="AG" class="logo-light" width="100" height="45">
+                <img src="./assets/L2.png" alt="AG" class="logo-dark" width="100" height="45">
             </a>
-            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span class="hamburger"></span>
+
+            <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
             </button>
-            <ul class="nav-links">
-                <li><a href="/files/AnanyaGoyal_Resume.pdf">Resume</a></li>
-                <li><a href="#work">Case Studies</a></li>
-                <li><a href="#other-work-title">Other Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="main-content">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>
-                        Hello, I am <br><span class="accent">Ananya</span>.
-                    </h1>
-                    <h2 class="hero-subtitle">
-                        I design <span class="strikethrough">buildings</span><br>
-                        experiences<span class="accent">.</span>
-                    </h2>
-                <img src="./assets/Header Pic.png" 
-                    alt="Ananya - UX Designer Portrait" 
-                    class="hero-image-mobile"
-                    loading="eager">
-                </div>
-                <div class="hero-image-desktop">
-                    <img src="./assets/Header Pic.png" alt="Ananya - UX Designer Portrait" loading="eager">
-                </div>
+            <div class="nav__links">
+                <a href="#work" class="nav__link">Work</a>
+                <a href="#about" class="nav__link">About</a>
+                <a href="#contact" class="nav__link">Contact</a>
+                <a href="/files/AnanyaGoyal_Resume.pdf" class="nav__link" target="_blank" rel="noopener">Resume</a>
             </div>
-        </div>
-    </section>
+        </nav>
+    </header>
 
-    <!-- About Section -->
-    <section id="services" class="about">
+    <!-- Main Content -->
+    <main id="main">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Starting out as an <strong>Architectural Designer</strong>, with <strong>5 years</strong> 
-                        of hands-on industrial experience, I am transitioning into <strong>User Experience Design.</strong>
-                    </p>
-                    <p>
-                        My background has given me the tools to <strong>think in systems, care</strong> about materials, 
-                        <strong>notice</strong> how people move through spaces and <strong>empathize</strong> with the end user.
-                    </p>
-                    <p><em>Turns out a lot it is transferrable to UX Design.</em></p>
-                </div>
-                <div class="hero-subtitle">
-                    <h2>
-                        <span class="strikethrough">Architectural</span><br>
-                        <span class="accent">UX</span> <span class="primary">designer</span>
-                    </h2>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Quote Section -->
-    <section class="quote-section">
-        <div class="container">
-            <div class="quote-content">
-                <blockquote class="quote">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero__content">
+                    <p class="hero__greeting">Hello, I'm</p>
+                    <h1 class="hero__name">Ananya Goyal</h1>
+                    <p class="hero__tagline">
+                        A UX designer with an architect's eye. I create digital experiences
+                        that feel as considered as the best physical spaces.
+                    </p>
+                    <div class="hero__cta">
+                        <a href="#work" class="btn btn--primary">View My Work</a>
+                        <a href="#contact" class="btn btn--secondary">Get in Touch</a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <img src="./assets/Header Pic.png" alt="Ananya Goyal - Designer">
+                </div>
+            </section>
+
+            <!-- Journey Section -->
+            <section class="journey animate-on-scroll" id="journey">
+                <div class="journey__header">
+                    <h2 class="journey__title">The Journey</h2>
+                    <p class="journey__subtitle">From designing buildings to designing experiences</p>
+                </div>
+
+                <div class="journey__timeline animate-stagger">
+                    <div class="journey__item">
+                        <div class="journey__icon">
+                            <span aria-hidden="true">🏛️</span>
+                        </div>
+                        <div class="journey__content">
+                            <h3>5 Years in Architecture</h3>
+                            <p>Designed residential, commercial, and institutional spaces. Learned to see how people actually move, behave, and feel.</p>
+                        </div>
+                    </div>
+
+                    <div class="journey__item">
+                        <div class="journey__icon">
+                            <span aria-hidden="true">👁️</span>
+                        </div>
+                        <div class="journey__content">
+                            <h3>Observing Behavior</h3>
+                            <p>Architecture taught me that good design is invisible. People shouldn't have to think about how to navigate a space.</p>
+                        </div>
+                    </div>
+
+                    <div class="journey__item">
+                        <div class="journey__icon">
+                            <span aria-hidden="true">💡</span>
+                        </div>
+                        <div class="journey__content">
+                            <h3>The Pivot</h3>
+                            <p>Realized digital products need the same human-centered thinking. The screen is just another space to design.</p>
+                        </div>
+                    </div>
+
+                    <div class="journey__item">
+                        <div class="journey__icon">
+                            <span aria-hidden="true">✨</span>
+                        </div>
+                        <div class="journey__content">
+                            <h3>UX Design Today</h3>
+                            <p>Now I bring spatial reasoning and design maturity to digital products. Same empathy, new medium.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Philosophy Section -->
+            <section class="philosophy animate-on-scroll">
+                <blockquote class="philosophy__quote">
                     Spaces and interfaces alike have the power to hold us — when designed with empathy, patience, and care.
                 </blockquote>
-                
-            </div>
+                <p class="philosophy__attribution">— My design philosophy</p>
+            </section>
+
+            <!-- Work Section -->
+            <section id="work" class="work animate-on-scroll">
+                <div class="work__header">
+                    <div>
+                        <h2 class="work__title">Selected Work</h2>
+                        <p class="work__subtitle">Case studies from both worlds</p>
+                    </div>
+                </div>
+
+                <div class="work__grid animate-stagger">
+                    <!-- UX Case Study 1 -->
+                    <article class="card">
+                        <a href="https://goyalananya.com/KCP/" class="card__link">
+                            <div class="card__image">
+                                <span class="card__tag">UX Design</span>
+                                <img src="./assets/KCP.png" alt="Karnataka Chitrakala Parishath app interface">
+                            </div>
+                            <div class="card__content">
+                                <h3 class="card__title">Karnataka Chitrakala Parishath</h3>
+                                <p class="card__description">Redesigned the museum experience with wayfinding, audio guides, and curated trails — making artworks accessible to every visitor.</p>
+                                <span class="card__cta">
+                                    View Case Study
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- UX Case Study 2 -->
+                    <article class="card">
+                        <a href="https://goyalananya.com/WD/" class="card__link">
+                            <div class="card__image">
+                                <span class="card__tag">UX Design</span>
+                                <img src="./assets/WD.png" alt="WannaDOO app interface">
+                            </div>
+                            <div class="card__content">
+                                <h3 class="card__title">WannaDOO!!</h3>
+                                <p class="card__description">A behavior-design app that turns idle moments into micro-activities. Built around habit psychology to make small wins feel rewarding.</p>
+                                <span class="card__cta">
+                                    View Case Study
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Architecture Case Study 1 -->
+                    <article class="card">
+                        <a href="./[Draft]AccessibleByDesign.pdf" class="card__link" target="_blank" rel="noopener">
+                            <div class="card__image">
+                                <span class="card__tag">Architecture</span>
+                                <img src="./assets/APDGuidelines.jpg" alt="Accessibility Guidelines document">
+                            </div>
+                            <div class="card__content">
+                                <h3 class="card__title">Accessible by Design</h3>
+                                <p class="card__description">Partnered with APD India to translate dense accessibility regulations into a visual guidebook for designers and developers.</p>
+                                <span class="card__cta">
+                                    Open PDF
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Architecture Case Study 2 (Coming Soon) -->
+                    <article class="card card--coming-soon">
+                        <div class="card__link">
+                            <div class="card__image">
+                                <span class="card__tag">Architecture</span>
+                                <img src="./assets/2r.png" alt="Architecture project">
+                            </div>
+                            <div class="card__content">
+                                <h3 class="card__title">5 Years of Built Work</h3>
+                                <p class="card__description">Residential, commercial, and institutional projects — the foundation of how I think about people and space.</p>
+                                <span class="card__cta">Coming Soon</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="about" class="skills animate-on-scroll">
+                <div class="skills__header">
+                    <h2 class="skills__title">What I Bring</h2>
+                    <p class="skills__subtitle">The best of both disciplines</p>
+                </div>
+
+                <div class="skills__grid animate-stagger">
+                    <div class="skill">
+                        <div class="skill__icon">
+                            <img src="./assets/1r.png" alt="">
+                        </div>
+                        <div class="skill__content">
+                            <h3>UX Craft</h3>
+                            <p>User research, journey mapping, wireframing, prototyping in Figma, and clear communication that bridges design and development.</p>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill__icon">
+                            <img src="./assets/2r.png" alt="">
+                        </div>
+                        <div class="skill__content">
+                            <h3>Architecture DNA</h3>
+                            <p>Spatial reasoning, design maturity, managing complex projects, and an intuition for what feels right — or when something's off.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Beyond Section -->
+            <section class="beyond animate-on-scroll">
+                <h2 class="beyond__title">Beyond the Portfolio</h2>
+                <ul class="beyond__list">
+                    <li class="beyond__item">I make <strong>origami</strong> and <strong>kirigami</strong> to think with my hands.</li>
+                    <li class="beyond__item">I'm a noticer — patterns, people, the way light falls.</li>
+                    <li class="beyond__item">I live for <strong>coffee</strong> and the rare cat that decides I'm trustworthy.</li>
+                </ul>
+            </section>
+
         </div>
-    </section>
-
-    <!-- Case Studies -->
-    <section id="work" class="case-studies">
-        <div class="container">
-            <h2>Case Studies</h2>
-            
-            <div class="case-study" role="article">
-                <div class="case-study-image">
-                    <img src="./assets/KCP.png" 
-                         alt="Museum Experience - KCP app"
-                         loading="lazy">
-                </div>
-                <div class="case-study-content">
-                    <h3 id="kcp-title">Karnataka Chitrakala Parishath</h3>
-                    <p>
-                        A digital companion that enhances art discovery and visitor engagement at KCP Museum.
-                    </p>
-                    <p>
-                        The app reimagines the experience by blending navigation, storytelling, and accessibility 
-                        into one cohesive platform.
-                    </p>
-                    <a href="https://goyalananya.com/KCP/" 
-                       class="btn-primary" 
-                       aria-labelledby="kcp-title"
-                       aria-label="View Karnataka Chitrakala Parishath case study">
-                        View Case Study <span aria-hidden="true">→</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="case-study reverse" role="article">
-                <div class="case-study-content">
-                    <h3 id="wannadoo-title">WannaDOO!!</h3>
-                    <p>
-                        A behavior-design app that transforms idle moments into intentional, rewarding micro-activities.
-                    </p>
-                    <p>
-                      WannaDOO helps users turn everyday downtime into opportunities for small wins, joy, and self-connection.
-                    </p>
-                    <a href="https://goyalananya.com/WD/" 
-                       class="btn-primary" 
-                       aria-labelledby="wannadoo-title"
-                       aria-label="View WannaDOO case study">
-                        View Case Study <span aria-hidden="true">→</span>
-                    </a>
-                </div>
-                <div class="case-study-image">
-                    <img src="./assets/WD.png" 
-                         alt="WannaDOO!! app"
-                         loading="lazy">
-                </div>
-            </div>
-            
-            <div class="case-study" role="article">
-                <div class="case-study-image">
-                    <img src="./assets/APDGuidelines.jpg" 
-                         alt="Accessibility Guidelines PDF"
-                         loading="lazy">
-                </div>
-                <div class="case-study-content">
-                    <h3 id="apd-title">Accessibility Guidelines (PDF)</h3>
-                    <p>
-                        I worked with Association Of People With Disability (APD) India to develop "Accessible by Design: A Practical Resource Guide," a simplified accessibility guideline book for designers and developers. We translated regulatory documents into visual standards. Here is the first draft of the guidelines.
-                    </p>
-                    <a href="./[Draft]AccessibleByDesign.pdf" 
-                       class="btn-primary" 
-                       target="_blank" rel="noopener noreferrer"
-                       aria-labelledby="apd-title"
-                       aria-label="Open Accessibility Guidelines PDF in a new tab">
-                        Open PDF <span aria-hidden="true">↗</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills">
-        <div class="container">
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon" aria-hidden="true">
-                        <img src="./assets/1r.png" alt="">
-                    </div>
-                    <div class="skill-content">
-                        <h4>Now Me</h4>
-                        <p>
-                            You get the following from the Now Me.
-                        </p>
-                        <p>
-                            A fresh (orthogonal?) perspective, deep research and observational skills, 
-                            UI design and prototyping master, excellent communicator.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-content">
-                        <h4>Past Me</h4>
-                        <p>
-                            You also get a bunch of past skills of mine –
-                        </p>
-                        <p>
-                            Spatial awareness, design maturity, project management, 
-                            human psychology and intuitive aesthetics 
-                            (some things just look wrong man).
-                        
-                        </p>
-                    </div>
-                    <div class="skill-icon" aria-hidden="true">
-                        <img src="./assets/2r.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Past Work Section -->
-    <section class="past-work" aria-labelledby="other-work-title">
-        <div class="container">
-            <div class="section-header">
-                <h2 id="other-work-title">Other Work</h2>
-                <h4>Exploring ideas across disciplines — where architecture, design, and curiosity meet.</h4>
-            </div>
-            
-            <div class="work-grid" role="list">
-                <a href="#" class="work-card" aria-labelledby="spatial-work-title" aria-disabled="false">
-                    <div class="work-image">
-                        <img src="./assets/3r.png" 
-                             alt="Architectural design"
-                             loading="lazy">
-                    </div>
-                    <div class="work-content">
-                        <h4 id="spatial-work-title">Built & Spatial Work</h4>
-                        <p>Architectural explorations that connect form, function, and feeling.</p>
-                    </div>
-                </a>
-
-                <a href="#" class="work-card" aria-labelledby="experiments-title" aria-disabled="false">
-                    <div class="work-image">
-                        <img src="./assets/4r.png" 
-                             alt="Personal projects"
-                             loading="lazy">
-                    </div>
-                    <div class="work-content">
-                        <h4 id="experiments-title">Experiments & Play</h4>
-                        <p>Personal projects shaped by curiosity and everyday observations.</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Personal Section -->
-    <section class="personal">
-        <div class="container">
-            <div class="personal-content">
-                <div class="personal-title">
-                    <h2><span class="primary">Hi,</span> <span class="accent">Again</span></h2>
-                </div>
-                <div class="personal-text">
-                    <ul>
-                        <li>Elsewhere, I find peace in working with paper – <strong>origami</strong> and <strong>kirigami</strong> are my happy place.</li>
-                        <li>I am a <strong>noticer</strong>; of patterns, people, speech, nature.</li>
-                        <li>I love it when a cat decides I am safe.</li>
-                        <li>I <strong>whistle</strong> and I live for <strong>coffee</strong>, sometimes I whistle for coffee.</li>
-                    </ul>
-                    <p><em>I have never been provided said coffee on whistle though.</em></p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer id="contact" class="footer">
         <div class="container">
-            <a href="/" class="footer-logo" aria-label="Home">
-                <img src="./assets/L2.png" alt="Ananya Logo">
-            </a>
-            <h4>Designing and thriving in the in-betweens</h4>
-            
-            <a href="mailto:goyalananya@outlook.com" class="email-link">
-                <svg viewBox="0 0 32 32" width="24" height="24" fill="currentColor" aria-hidden="true">
-                    <path d="M5.07187 9.20292C5.2168 8.57709 5.57307 8.01832 6.08232 7.6181C6.59158 7.21789 7.22365 6.99996 7.875 7H25.125C25.7764 6.99996 26.4084 7.21789 26.9177 7.6181C27.4269 8.01832 27.7832 8.57709 27.9281 9.20292L16.5 16.0865L5.07187 9.20292ZM5 10.8207V20.8847L13.3418 15.8442L5 10.8207ZM14.7189 16.6758L5.27456 22.3807C5.50791 22.8657 5.87619 23.2753 6.33656 23.5619C6.79693 23.8486 7.33044 24.0005 7.875 24H25.125C25.6695 24.0001 26.2028 23.8479 26.6629 23.561C27.123 23.274 27.491 22.8643 27.724 22.3793L18.2796 16.6744L16.5 17.7468L14.7189 16.6744V16.6758ZM19.6582 15.8457L28 20.8847V10.8207L19.6582 15.8442V15.8457Z"/>
-                </svg>
-                <span>goyalananya@outlook.com</span>
-            </a>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Ananya -- always in progress.</p>
-                <!-- <a href="/credits.html">Credits</a> -->
+            <div class="footer__content">
+                <a href="/" class="footer__logo" aria-label="Ananya Goyal - Home">
+                    <img src="./assets/L1.png" alt="AG" class="logo-light" width="120">
+                    <img src="./assets/L2.png" alt="AG" class="logo-dark" width="120">
+                </a>
+                <h2 class="footer__title">Let's Connect</h2>
+                <a href="mailto:goyalananya@outlook.com" class="footer__email">
+                    goyalananya@outlook.com
+                </a>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 Ananya — always in progress.</p>
             </div>
         </div>
     </footer>
